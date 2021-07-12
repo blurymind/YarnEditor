@@ -174,11 +174,7 @@ export var JsEditor = function({
               return {
                 word: `${mem.name}()`,
                 title: `${mem.name}(${mem.parameters
-                  .map(
-                    p =>
-                      `${p.name}${p.questionToken ? '?' : ''}: ${(p.type || {})
-                        .kind || 'args'}`
-                  )
+                  .map(p => `${p.name}${p.questionToken ? '?' : ''}`)
                   .join(',')})`,
                 about: `
                 \nkind:${mem.kind}
